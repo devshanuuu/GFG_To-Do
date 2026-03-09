@@ -1,0 +1,77 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
+}
+
+body{
+background:#f4f6f8;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:30px;
+width:400px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.title{
+text-align:center;
+margin-bottom:20px;
+font-weight:600;
+color:#333;
+}
+
+.input-sec{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+#inputtext{
+flex:1;
+padding:10px 12px;
+border:1px solid #ddd;
+border-radius:6px;
+outline:none;
+font-size:14px;
+}
+
+#inputtext:focus{
+border-color:#4f46e5;
+}
+
+#Taskbutton{
+padding:10px 16px;
+border:none;
+background:#4f46e5;
+color:white;
+border-radius:6px;
+cursor:pointer;
+transition:0.2s;
+}
+
+#Taskbutton:hover{
+background:#4338ca;
+}
+
+#taskList{
+list-style:none;
+}
+
+#taskList li{
+background:#f9fafb;
+padding:10px 12px;
+border-radius:6px;
+margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+}
