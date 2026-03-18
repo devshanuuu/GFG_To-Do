@@ -11,9 +11,14 @@ addButton.addEventListener("click", () => {
     }
 
     const list = document.createElement("li");
-    list.textContent = taskText;  // Adding text to task
+    list.innerHTML = `<span>${taskText}</span>
+    <button class="delete-btn">Delete</button>`;  // Adding text to task and delete button
 
     taskList.appendChild(list);
     taskInput.value = ""  // Reset input
-    
+
+    const deleteBtn = list.querySelector(".delete-btn")  // We are searching inside that specific <li> only
+    deleteBtn.addEventListener("click", () => {
+        li.remove();
+    });
 });
