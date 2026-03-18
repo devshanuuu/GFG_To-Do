@@ -8,7 +8,7 @@ const addButton = document.getElementById("Taskbutton");
 const taskList = document.getElementById("tasklist");
 
 
-// Common function for adding deleting and update logic
+// Common function for adding, deleting and update logic
 const createTask = (taskText) => {
      
     const list = document.createElement("li");
@@ -64,6 +64,7 @@ addButton.addEventListener("click", () => {
     
 });
 
+// Function for loading data on refresh
 const loadTasks = () => {
     const storedTasks = JSON.parse(localStorage.getItem("tasks"));  // Converting string data to array 
 
