@@ -12,13 +12,27 @@ addButton.addEventListener("click", () => {
 
     const list = document.createElement("li");
     list.innerHTML = `<span>${taskText}</span>
+    <button class="edit-btn">Edit</button>
     <button class="delete-btn">Delete</button>`;  // Adding text to task and delete button
 
     taskList.appendChild(list);
     taskInput.value = ""  // Reset input
-
-    const deleteBtn = list.querySelector(".delete-btn")  // We are searching inside that specific <li> only
+    
+    // Delete functionality
+    const deleteBtn = list.querySelector(".delete-btn");  // We are searching inside that specific <li> only
     deleteBtn.addEventListener("click", () => {
-        li.remove();
+        list.remove();
+    });
+    
+    // Edit functionality
+    const editBtn = list.querySelector(".edit-btn");
+    editBtn.addEventListener("click", () => {
+    const taskSpan = list.querySelector("span");
+    const updatedText = prompt("Edit your task" , taskSpan.textContent);
+
+    if(updatedText !== null && updatedText.trim() !== ""){  // Checks if text not changed or empty.
+      taskSpan.textContent = updatedText;
+    }
+
     });
 });
