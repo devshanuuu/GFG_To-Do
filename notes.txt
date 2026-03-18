@@ -1,0 +1,27 @@
+1. Event Handling
+Syntax: element.addEventListener('click', () => { /* action */ });
+Used to run a function when an event occurs (click, submit, input).
+
+2. DOM Selection
+document.getElementById('id');
+document.querySelector('.class');
+element.querySelector('.child');
+document = whole page, element = specific section.
+
+3. Creating & Modifying Elements
+const el = document.createElement('li');
+el.innerHTML = 'Text'; (HTML supported)
+el.textContent = 'Text'; (plain text)
+parent.appendChild(el);
+
+4. String Methods
+text.trim(); → removes spaces from start/end.
+
+5. Arrays
+let arr = [];
+arr.push(value); → add item
+arr.indexOf(value); → find index or -1
+
+6. JSON Methods
+JSON.stringify(data); → object/array to string
+JSON.parse(data); → string to object/array
